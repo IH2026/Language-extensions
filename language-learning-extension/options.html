@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning Helper - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>Language Learning Helper</h1>
+      <p>Settings</p>
+    </header>
+
+    <main class="options-content">
+      <!-- API Key Section -->
+      <section class="settings-section">
+        <h2>OpenAI API Key</h2>
+        <p class="section-description">
+          Enter your OpenAI API key to enable AI-powered explanations.
+          Your key is stored locally and never shared.
+        </p>
+
+        <div class="input-group">
+          <label for="apiKey">API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off" />
+            <button type="button" id="toggleVisibility" class="toggle-btn" title="Show/hide key">
+              <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button id="saveBtn" class="save-btn">Save Settings</button>
+        <div id="statusMessage" class="status-message"></div>
+      </section>
+
+      <!-- How to Get API Key -->
+      <section class="settings-section">
+        <h2>How to Get an API Key</h2>
+        <ol class="instructions-list">
+          <li>Go to <a href="https://platform.openai.com/signup" target="_blank">platform.openai.com</a></li>
+          <li>Create an account or sign in</li>
+          <li>Navigate to <strong>API Keys</strong> in the left sidebar</li>
+          <li>Click <strong>"Create new secret key"</strong></li>
+          <li>Copy the key and paste it above</li>
+        </ol>
+        <p class="note">
+          <strong>Note:</strong> OpenAI charges a small fee for API usage (usually just a few cents per explanation).
+          New accounts often receive free credits to get started.
+        </p>
+      </section>
+
+      <!-- Data Management -->
+      <section class="settings-section">
+        <h2>Data Management</h2>
+        <p class="section-description">
+          Manage your saved vocabulary data.
+        </p>
+        <div class="button-group">
+          <button id="exportDataBtn" class="secondary-btn">Export All Data</button>
+          <button id="clearDataBtn" class="danger-btn">Clear All Vocabulary</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="options-footer">
+      <p>Language Learning Helper v1.0.0</p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
